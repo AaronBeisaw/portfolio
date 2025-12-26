@@ -219,4 +219,27 @@
         <!-- Quantum Spin Chains -->
         <div class="border rounded p-4 bg-white">
             <button class="accordion-button w-full text-left font-semibold">Quantum Spin Chains | Led By: Dr. Lea Ferreira dos Santos, University of Connecticut | June, 2023 - Present</button>
-            <div class="accordion-content
+            <div class="accordion-content">
+                <li>The goal of this research project was to be able to simulate and understand how one and two dimensional spin chains act under a given hamiltonian, and how they evolve through time. I simulated these systems classically in one dimension using a combination of Mathematica and Python. While the focus of this work was for the 1D case, the 2D case was also studied and I found that the same behaviors arise - bound pairs of quantum spin particles are robust, and do not want to separate under the action of a hamiltonian. In the future, this subject could be studied using alternate algorithms in a quantum computing system, but this was beyond the scope of our project at the time. At the American Physical Society's March Meeting 2024 in Minneapolis, I gave a talk on our findings. </li>
+                <li>I also aided Dr. Santos in the onboarding of a new undergraduate student into the project and helped them get caught up on the six months of progress I had made at that point. </li>
+            </div>
+        </div>
+
+        <script>
+            // Accordion functionality
+            document.querySelectorAll('.accordion-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const parent = button.parentElement;
+                    parent.classList.toggle('accordion-open');
+                });
+            });
+            
+            // Animate skill bars on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.skill-fill').forEach(bar => {
+                    const width = bar.getAttribute('data-width') || bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => { bar.style.width = width; }, 200);
+                });
+            });
+            </script>
