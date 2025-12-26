@@ -1,245 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aaron Beisaw | Physics Portfolio</title>
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-/* Accordion & collapsible styles */
-.accordion-button {
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.accordion-content {
-    display: none;
-    padding: 0.5rem 1rem;
-}
-.accordion-open .accordion-content {
-    display: block;
-}
-.skill-bar {
-    height: 1rem;
-    border-radius: 0.5rem;
-    background-color: #ddd;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-.skill-fill {
-    height: 100%;
-    background-color: #4f46e5;
-    width: 0;
-    transition: width 1s;
-}
-.skill-bar span {
-    position: absolute;
-    left: 0.5rem;
-    top: 0;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: white;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Beisaw | Physics Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Accordion & collapsible styles */
+        .accordion-button {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 0.5rem 1rem;
+        }
+
+        .accordion-open .accordion-content {
+            display: block;
+        }
+
+        .skill-bar {
+            height: 1rem;
+            border-radius: 0.5rem;
+            background-color: #ddd;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background-color: #4f46e5;
+            width: 0;
+            transition: width 1s;
+        }
+
+        .skill-bar span {
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            color: white;
+        }
+    </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-<!-- Header / Hero -->
-<header class="bg-indigo-600 text-white p-8 text-center">
-    <h1 class="text-4xl font-bold">Aaron Beisaw</h1>
-    <p class="text-xl mt-2">Physics B.S.</p>
-    <p class="mt-2"><a href="mailto:abeisaw@crabtreelexus.com" class="underline">abeisaw@crabtreelexus.com</a></p>
-    <a href="aaronBeisawCV.pdf" class="mt-4 inline-block bg-white text-indigo-600 font-semibold px-4 py-2 rounded hover:bg-gray-100">Download CV (PDF)</a>
-</header>
+    <!-- Header / Hero -->
+    <header class="bg-indigo-600 text-white p-8 text-center">
+        <h1 class="text-4xl font-bold">
+            Aaron Beisaw
+        </h1>
+        <p class="text-xl mt-2">
+            Physics B.S.
+        </p>
+        <p class="mt-2">
+            <a href="mailto:abeisaw@crabtreelexus.com" class="underline">
+                abeisaw@crabtreelexus.com
+            </a>
+        </p>
+        <a href="aaronBeisawCV.pdf"
+            class="mt-4 inline-block bg-white text-indigo-600 font-semibold px-4 py-2 rounded hover:bg-gray-100">
+            Download CV (PDF)
+        </a>
+    </header>
 
-<main class="max-w-5xl mx-auto p-8 space-y-12">
+    <main class="max-w-5xl mx-auto p-8 space-y-12">
 
-<!-- About Me -->
-<section>
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <div class="space-y-4">
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">The Technical Side</button>
-            <div class="accordion-content mt-2">
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>I enjoy working with anything that has to do with numbers and data, but in particular I enjoy optimization, simulation, and applying my math and coding skills to anything I am doing.</li>
-                    <li>I have worked on modeling and analyzing raw data from the Large Hadron Collider, numerical simulation of quantum spin chains, Supersymmetry, and have even applied my skills to identify problems in an automotive dealership based on data supported trends. In many of these situations, I have either ended up teaching myself something new to be able to accomplish my goals, or finding unexpected insights or problems along the way.</li>
-                    <li>It's safe to say math and coding are passions of mine, and I plan to keep developing my skills as I move through my career, no matter the industry.</li>
-                </ul>
+        <!-- About Me -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4">
+                About Me
+            </h2>
+            <div class="space-y-4">
+
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        The Technical Side
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>
+                                I enjoy working with anything that has to do with numbers and data, but in particular I enjoy optimization, simulation, and applying my math and coding skills to anything I am doing.
+                            </li>
+                            <li>
+                                I have worked on modeling and analyzing raw data from the Large Hadron Collider, numerical simulation of quantum spin chains, Supersymmetry, and have even applied my skills to identify problems in an automotive dealership based on data supported trends. In many of these situations, I have either ended up teaching myself something new to be able to accomplish my goals, or finding unexpected insights or problems along the way.
+                            </li>
+                            <li>
+                                It's safe to say math and coding are passions of mine, and I plan to keep developing my skills as I move through my career, no matter the industry.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        The Personal Side
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>
+                                I am definitely a more quiet person. I enjoy working with a smaller team (10-15 people as an upper bound) as a subset of a larger group. I feel like this leads to better interpersonal relationships which in turn lead to better, more productive problem solving.
+                            </li>
+                            <li>
+                                Outside of work, I also enjoy a wide range of music, from heavy metal, to EDM, to traditional style Chinese and more. I played the trombone for eight years growing up, and my grandfather was in a Beatles cover band, so music is definitely a big part of my life. I also love being out in nature - whether that means hiking, running, fishing with friends, playing backyard sports, or taking the scenic route to appreciate the natural beauty even if it is a little bit slower.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">The Personal Side</button>
-            <div class="accordion-content mt-2">
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>I am definitely a more quiet person. I enjoy working with a smaller team (10-15 people as an upper bound) as a subset of a larger group. I feel like this leads to better interpersonal relationships which in turn lead to better, more productive problem solving.</li>
-                    <li>Outside of work, I also enjoy a wide range of music, from heavy metal, to EDM, to traditional style Chinese and more. I played the trombone for eight years growing up, and my grandfather was in a Beatles cover band, so music is definitely a big part of my life. I also love being out in nature - whether that means hiking, running, fishing with friends, playing backyard sports, or taking the scenic route to appreciate the natural beauty even if it is a little bit slower.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Education -->
-<section>
-    <h2 class="text-3xl font-bold mb-4">Education</h2>
-    <div class="space-y-4">
-        <div class="border rounded p-4 bg-white">
-            <h3 class="font-semibold text-xl">Gateway Community College</h3>
-            <p>A.S. in Science and Mathematics</p>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Self studied some advanced topics in physics under Prof. Tom Mannino</li>
-                <li>Performed physics 2 labs one on one with Prof. Mannino prior to the lab meeting in order to assist students as an unofficial lab TA.</li>
-            </ul>
-        </div>
-        <div class="border rounded p-4 bg-white">
-            <h3 class="font-semibold text-xl">University of Maryland</h3>
-            <p>Progress towards B.S. in Physics</p>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Took part in a two semester honors sequence in computing and research in physics, during which I first learned Linux, data cleaning and analysis, and worked on a project under an advisor (see research section below for more details)</li>
-            </ul>
-        </div>
-        <div class="border rounded p-4 bg-white">
-            <h3 class="font-semibold text-xl">University of Connecticut</h3>
-            <p>B.S. in Physics</p>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>March 2024, attended and gave a talk at the American Physical Society's March Meeting on the topic of quantum spin chain systems and numerical simulation.</li>
-            </ul>
-        </div>
-    </div>
-</section>
+        <!-- Education -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4">
+                Education
+            </h2>
+            <div class="space-y-4">
 
-<!-- Personal Work -->
-<section>
-    <h2 class="text-3xl font-bold mb-4">Personal Work</h2>
-    <div class="space-y-4">
-        <div class="border rounded p-4 bg-white">
-            <h3 class="font-semibold text-xl">Systems Administration and Troubleshooting</h3>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>I deployed Arch Linux (Manjaro) on two personal computer systems and successfully troubleshooted various errors that prevented boot after failed driver updates. In particular, recovery was successful after failed Nvidia driver updates without loss of data.</li>
-                <li>I have successfully built 5 computer systems since 2013, along with several hardware upgrades and OS installs along the way</li>
-                <li>When living on campus, I set up my home desktop to be accessible from my laptop via SSH and SFTP</li>
-                <li>I successfully troubleshooted and solved memory corruption issues with Riot Games's Vanguard kernel anticheat and windows 11 version 23H2, which was resulting in repeated BSOD. Troubleshooting involved looking through the windows memory dump and testing my memory to rule it out as a culprit, eventually leading me to vanguard as the source of the problem.</li>
-            </ul>
-        </div>
-        <div class="border rounded p-4 bg-white">
-            <h3 class="font-semibold text-xl">Computational and Numerical Coding</h3>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li><strong>Lexus Service Data Analysis In progress:</strong> Developing a Python program that takes CSV data from three sources at work, cleans them, properly links the rows from each source together (this is all customer based data, so this is crucial), and outputs a new CSV with all of the relevant data for further analysis. This is going to be used to analyze shop performance and identify problem areas and to guide us in identifying root causes.</li>
-                <li><strong>Quantum Spin Chain project:</strong> Refactored my research group's code to be modular and, as a result, much more flexible than how we initially wrote it. This resulted in us being able to run simulations faster and on a much wider range of systems without having to double the amount of backend code. In particular, we were able to jump straight into the second phase of the project and begin analysis and simulation of two dimensional systems.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- Work Experience -->
-<section>
-    <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
-    <div class="space-y-4">
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">Specialty Fundraising Agent | Lester Inc. | 2019-2020</button>
-            <div class="accordion-content mt-2">
-                <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>I worked as a fundraising agent for Lester Inc. on their specialty team, calling for universities and non-profit groups to solicit donations and service renewals. These donations fell on average in the $100 to $1,000 range. Often times the most successful course of action would be to go off script based on the individual customer and their needs, which allowed me to overcome objections. Outside of my explicit job responsibilities, I would keep track of what works well and what does not and, depending on which account I was working on, advise on customer complaints, and relay this information to my supervisors.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">Parts Counterman | McDermott / Crabtree Chevrolet | 2023-2025</button>
-            <div class="accordion-content mt-2">
-                <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>I fulfilled customer and in-house auto shop special orders on a daily basis.</li>
-                    <li>I ensured an accurate inventory was kept, in terms of both records and stocking locations.</li>
-                    <li>Morning check in and stocking consisted of an average of 50-100 parts, while each special order I put together for delivery could range from 5-30 parts per order. Special orders would be put together in the morning and in the afternoon each day, usually 3-5 orders at once for a total of 15-90 parts depending on the day.</li>
-                    <li>During the CDK cyber attack in June 2024, I collected all documentation for incoming special and stock orders as well as sales made while CDK was still down and was responsible for keeping all records properly organized to be uploaded into our systems upon relaunch. This amounted to keeping track of tens of thousands of dollars in sale orders, and we were able to successfully recover from the incident in a timely fashion. Within one week of systems returning, I had all paper records input into CDK and stored for future reference.</li>
-                    <li>I managed General Motors return orders, core claims, and damaged goods claims for the Chevrolet parts department. Return orders were done on a monthly basis, averaging $3,000 each month. Daily core claims were an average of $50 per non-engine core and typically there would be 5-10 on a given day.</li>
-                    <li>Helped facilitate a smooth transition of daily tasks during the transfer of ownership from East Haven Cars LLC to Bobby Crabtree.</li>
-                    <li>Ensured proper handling and storage of hazardous materials, including motor oils, old and new automotive batteries, and airbag safety devices.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">FastTrac Assistant Manager | Crabtree Lexus | 2025-Present</button>
-            <div class="accordion-content mt-2">
-                <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>Oversee loaner fleet of 105 cars with an average value of around $65,000, ensuring that cars are checked in, cleaned, and fully fueled each morning.</li>
-                    <li>Manage recalls for loaner vehicles, ensuring cars are put on hold for safety recalls and then writing and billing out warranty repair orders when the recall remedies become available.</li>
-                    <li>Training for the service advisor role</li>
-                    <li>Assist in training service advisors on Dealerware and MobilityCloud valet services.</li>
-                    <li>Create and manage pickup and dropoff runs for valet customers.</li>
-                    <li>Resolve pending, overdue, or incorrect contracts and ensure customer balances are taken care of.</li>
-                    <li>Set up new cars for the loaner fleet, including plating, fueling, and cleaning to get them on the road.</li>
-                    <li>Assist service department with writing and billing out repair orders when needed, and perform extensive road tests for technicians (>50 miles)</li>
-                    <li>Coordinate with technicians to ensure valet jobs are prioritized and completed in a timely fashion</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Research -->
-<section>
-    <h2 class="text-3xl font-bold mb-4">Research</h2>
-    <div class="space-y-4">
-        <!-- Particle Theory -->
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">Particle Theory | Advisor: Dr. Kaustubh Agashe, UMD | 02 2021-05 2021</button>
-            <div class="accordion-content mt-2">
-                <p><strong>Background:</strong> Part of a two-student team working to build up the theory behind Dr. Agashe's paper <em>arXiv:1209.0772</em> and reproduce the plots to verify the theory and its predictions</p>
-                <p><strong>Theory:</strong> Demonstrates that the laboratory frame energy distribution of a daughter particle in a two-body decay contains a peak which corresponds to the energy of the daughter particle in the rest frame of the parent. I found that this peak remains invariant under changes to the parent particle's boost distribution and that this method is model independent, thus it can be useful in analyzing data from the Large Hadron Collider in searching for new physics. This method was later used by the CMS team at LHC to measure the top quark mass.</p>
-                <p><strong>Simulation:</strong> I made use of MadGraph5 to generate proton-proton collisions which result in the generation of a top and an anti-top quark that further decay into w+ boson and bottom quark, and w- boson and anti-bottom quark. This process was generated for various collider energy levels ranging from 630 GeV to 100 TeV, after which MadAnalysis was used to plot the energy distribution histograms on top of each other. The plots generated were what I expected to see, with a common peak at 68 GeV which was the rest frame energy of the bottom quark that I calculated using the theory.</p>
-            </div>
-        </div>
-
-        <!-- Field Theory -->
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">Field Theory | Led By: Dr. S. James Gates Jr. et. al., Brown University | June 1, 2021 - June 25, 2021</button>
-            <div class="accordion-content mt-2">
-                <p><strong>Overview:</strong> Brown University's Summer Student Theoretical Physics Research Session (SSTPRS) for 2021 took place online through Zoom, with Dr. Konstantinos Koutrolipos and Dr. Kory Stiffler (both from Brown University) alongside Dr. Gates, as well as two student mentors: Aleksander Cianciara (Brown University, PhD Student) and Gabe Yerger (UMD, Undergraduate). Each week covered a different topic:
-                    <ul class="list-disc pl-5">
-                        <li>Week 1: Lie Group Theory</li>
-                        <li>Week 2: Differential Geometry</li>
-                        <li>Week 3: Lagrangian Dynamics, Clifford Algebra, and Spinors</li>
-                        <li>Week 4: Introduction to Supersymmetry</li>
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl">
+                        Gateway Community College
+                    </h3>
+                    <p>
+                        A.S. in Science and Mathematics
+                    </p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>
+                            Self studied some advanced topics in physics under Prof. Tom Mannino
+                        </li>
+                        <li>
+                            Performed physics 2 labs one on one with Prof. Mannino prior to the lab meeting in order to assist students as an unofficial lab TA.
+                        </li>
                     </ul>
-                </p>
-                <p>Each week students worked in groups of three to complete the assigned homework, typically done individually with a discussion before class to come to a consensus on the results. These groups were changed each week so that we ended up working with and communicating with different people throughout the program.</p>
-            </div>
-        </div>
+                </div>
 
-        <!-- Supersymmetry -->
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">Supersymmetry | Led By: Dr. S. James Gates Jr., Brown University | June, 2021 - June, 2022</button>
-            <div class="accordion-content mt-2">
-                <p><strong>Overview:</strong> I worked on a research project under the lead of Dr. S. James Gates Jr. with a small subset of the SSTPRS group described above. My work on this project was heavily computational; after reading through various relevant papers describing variations of supersymmetric field theories, I used Mathematica and Python to verify the results, create an algorithm to generate explicit matrices from those results, and then mapped the matrices to the fields being described to generate graphical representations of each theory, known as Adinkras. To be sure of the validity of our results, we split the group into several subgroups who worked independently on the same task so that we could come back together and cross examine each other's results to make sure our findings matched and our codes made logical sense.</p>
-            </div>
-        </div>
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl">
+                        University of Maryland
+                    </h3>
+                    <p>
+                        Progress towards B.S. in Physics
+                    </p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>
+                            Took part in a two semester honors sequence in computing and research in physics, during which I first learned Linux, data cleaning and analysis, and worked on a project under an advisor (see research section below for more details)
+                        </li>
+                    </ul>
+                </div>
 
-        <!-- Quantum Spin Chains -->
-        <div class="border rounded p-4 bg-white">
-            <button class="accordion-button w-full text-left font-semibold">Quantum Spin Chains | Led By: Dr. Lea Ferreira dos Santos, University of Connecticut | June, 2023 - Present</button>
-            <div class="accordion-content">
-                <li>The goal of this research project was to be able to simulate and understand how one and two dimensional spin chains act under a given hamiltonian, and how they evolve through time. I simulated these systems classically in one dimension using a combination of Mathematica and Python. While the focus of this work was for the 1D case, the 2D case was also studied and I found that the same behaviors arise - bound pairs of quantum spin particles are robust, and do not want to separate under the action of a hamiltonian. In the future, this subject could be studied using alternate algorithms in a quantum computing system, but this was beyond the scope of our project at the time. At the American Physical Society's March Meeting 2024 in Minneapolis, I gave a talk on our findings. </li>
-                <li>I also aided Dr. Santos in the onboarding of a new undergraduate student into the project and helped them get caught up on the six months of progress I had made at that point. </li>
-            </div>
-        </div>
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl">
+                        University of Connecticut
+                    </h3>
+                    <p>
+                        B.S. in Physics
+                    </p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>
+                            March 2024, attended and gave a talk at the American Physical Society's March Meeting on the topic of quantum spin chain systems and numerical simulation.
+                        </li>
+                    </ul>
+                </div>
 
-        <script>
-            // Accordion functionality
-            document.querySelectorAll('.accordion-button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const parent = button.parentElement;
-                    parent.classList.toggle('accordion-open');
-                });
+            </div>
+        </section>
+
+        <!-- Personal Work -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4">
+                Personal Work
+            </h2>
+            <div class="space-y-4">
+
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl">
+                        Systems Administration and Troubleshooting
+                    </h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>
+                            I deployed Arch Linux (Manjaro) on two personal computer systems and successfully troubleshooted various errors that prevented boot after failed driver updates. In particular, recovery was successful after failed Nvidia driver updates without loss of data.
+                        </li>
+                        <li>
+                            I have successfully built 5 computer systems since 2013, along with several hardware upgrades and OS installs along the way
+                        </li>
+                        <li>
+                            When living on campus, I set up my home desktop to be accessible from my laptop via SSH and SFTP
+                        </li>
+                        <li>
+                            I successfully troubleshooted and solved memory corruption issues with Riot Games's Vanguard kernel anticheat and windows 11 version 23H2, which was resulting in repeated BSOD. Troubleshooting involved looking through the windows memory dump and testing my memory to rule it out as a culprit, eventually leading me to vanguard as the source of the problem.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl">
+                        Computational and Numerical Coding
+                    </h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>
+                            <strong>Lexus Service Data Analysis In progress:</strong> Developing a Python program that takes CSV data from three sources at work, cleans them, properly links the rows from each source together (this is all customer based data, so this is crucial), and outputs a new CSV with all of the relevant data for further analysis. This is going to be used to analyze shop performance and identify problem areas and to guide us in identifying root causes.
+                        </li>
+                        <li>
+                            <strong>Quantum Spin Chain project:</strong> Refactored my research group's code to be modular and, as a result, much more flexible than how we initially wrote it. This resulted in us being able to run simulations faster and on a much wider range of systems without having to double the amount of backend code. In particular, we were able to jump straight into the second phase of the project and begin analysis and simulation of two dimensional systems.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4">
+                Work Experience
+            </h2>
+            <div class="space-y-4">
+
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        Specialty Fundraising Agent | Lester Inc. | 2019-2020
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>
+                                I worked as a fundraising agent for Lester Inc. on their specialty team, calling for universities and non-profit groups to solicit donations and service renewals. These donations fell on average in the $100 to $1,000 range. Often times the most successful course of action would be to go off script based on the individual customer and their needs, which allowed me to overcome objections. Outside of my explicit job responsibilities, I would keep track of what works well and what does not and, depending on which account I was working on, advise on customer complaints, and relay this information to my supervisors.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        Parts Counterman | McDermott / Crabtree Chevrolet | 2023-2025
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>
+                                I fulfilled customer and in-house auto shop special orders on a daily basis.
+                            </li>
+                            <li>
+                                I ensured an accurate inventory was kept, in terms of both records and stocking locations.
+                            </li>
+                            <li>
+                                Morning check in and stocking consisted of an average of 50-100 parts, while each special order I put together for delivery could range from 5-30 parts per order. Special orders would be put together in the morning and in the afternoon each day, usually 3-5 orders at once for a total of 15-90 parts depending on the day.
+                            </li>
+                            <li>
+                                During the CDK cyber attack in June 2024, I collected all documentation for incoming special and stock orders as well as sales made while CDK was still down and was responsible for keeping all records properly organized to be uploaded into our systems upon relaunch. This amounted to keeping track of tens of thousands of dollars in sale orders, and we were able to successfully recover from the incident in a timely fashion. Within one week of systems returning, I had all paper records input into CDK and stored for future reference.
+                            </li>
+                            <li>
+                                I managed General Motors return orders, core claims, and damaged goods claims for the Chevrolet parts department. Return orders were done on a monthly basis, averaging $3,000 each month. Daily core claims were an average of $50 per non-engine core and typically there would be 5-10 on a given day.
+                            </li>
+                            <li>
+                                Helped facilitate a smooth transition of daily tasks during the transfer of ownership from East Haven Cars LLC to Bobby Crabtree.
+                            </li>
+                            <li>
+                                Ensured proper handling and storage of hazardous materials, including motor oils, old and new automotive batteries, and airbag safety devices.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        FastTrac Assistant Manager | Crabtree Lexus | 2025-Present
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>
+                                Oversee loaner fleet of 105 cars with an average value of around $65,000, ensuring that cars are checked in, cleaned, and fully fueled each morning.
+                            </li>
+                            <li>
+                                Manage recalls for loaner vehicles, ensuring cars are put on hold for safety recalls and then writing and billing out warranty repair orders when the recall remedies become available.
+                            </li>
+                            <li>
+                                Training for the service advisor role
+                            </li>
+                            <li>
+                                Assist in training service advisors on Dealerware and MobilityCloud valet services.
+                            </li>
+                            <li>
+                                Create and manage pickup and dropoff runs for valet customers.
+                            </li>
+                            <li>
+                                Resolve pending, overdue, or incorrect contracts and ensure customer balances are taken care of.
+                            </li>
+                            <li>
+                                Set up new cars for the loaner fleet, including plating, fueling, and cleaning to get them on the road.
+                            </li>
+                            <li>
+                                Assist service department with writing and billing out repair orders when needed, and perform extensive road tests for technicians (>50 miles)
+                            </li>
+                            <li>
+                                Coordinate with technicians to ensure valet jobs are prioritized and completed in a timely fashion
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Research -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4">
+                Research
+            </h2>
+            <div class="space-y-4">
+
+                <!-- Particle Theory -->
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        Particle Theory | Advisor: Dr. Kaustubh Agashe, UMD | 02 2021-05 2021
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <p>
+                            <strong>Background:</strong> Part of a two-student team working to build up the theory behind Dr. Agashe's paper
+                            <em>arXiv:1209.0772</em> and reproduce the plots to verify the theory and its predictions
+                        </p>
+                        <p>
+                            <strong>Theory:</strong> Demonstrates that the laboratory frame energy distribution of a daughter particle in a two-body decay contains a peak which corresponds to the energy of the daughter particle in the rest frame of the parent. I found that this peak remains invariant under changes to the parent particle's boost distribution and that this method is model independent, thus it can be useful in analyzing data from the Large Hadron Collider in searching for new physics. This method was later used by the CMS team at LHC to measure the top quark mass.
+                        </p>
+                        <p>
+                            <strong>Simulation:</strong> I made use of MadGraph5 to generate proton-proton collisions which result in the generation of a top and an anti-top quark that further decay into w+ boson and bottom quark, and w- boson and anti-bottom quark. This process was generated for various collider energy levels ranging from 630 GeV to 100 TeV, after which MadAnalysis was used to plot the energy distribution histograms on top of each other. The plots generated were what I expected to see, with a common peak at 68 GeV which was the rest frame energy of the bottom quark that I calculated using the theory.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Field Theory -->
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        Field Theory | Led By: Dr. S. James Gates Jr. et. al., Brown University | June 1, 2021 - June 25, 2021
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <p>
+                            <strong>Overview:</strong> Brown University's Summer Student Theoretical Physics Research Session (SSTPRS) for 2021 took place online through Zoom, with Dr. Konstantinos Koutrolipos and Dr. Kory Stiffler (both from Brown University) alongside Dr. Gates, as well as two student mentors: Aleksander Cianciara (Brown University, PhD Student) and Gabe Yerger (UMD, Undergraduate). Each week covered a different topic:
+                        </p>
+                        <ul class="list-disc pl-5">
+                            <li>Week 1: Lie Group Theory</li>
+                            <li>Week 2: Differential Geometry</li>
+                            <li>Week 3: Lagrangian Dynamics, Clifford Algebra, and Spinors</li>
+                            <li>Week 4: Introduction to Supersymmetry</li>
+                        </ul>
+                        <p>
+                            Each week students worked in groups of three to complete the assigned homework, typically done individually with a discussion before class to come to a consensus on the results. These groups were changed each week so that we ended up working with and communicating with different people throughout the program.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Supersymmetry -->
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        Supersymmetry | Led By: Dr. S. James Gates Jr., Brown University | June, 2021 - June, 2022
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <p>
+                            <strong>Overview:</strong> I worked on a research project under the lead of Dr. S. James Gates Jr. on Supersymmetry. The research involved developing a Mathematica package to generate "adinkras" for arbitrary supermultiplets and calculate various combinatorial properties of the resulting graphs. The project lasted over a year.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quantum Spin Chains -->
+                <div class="border rounded p-4 bg-white">
+                    <button class="accordion-button w-full text-left font-semibold">
+                        Quantum Spin Chains | Advisor: Dr. Manuel Valiente, University of Connecticut | Fall 2022 - Spring 2024
+                    </button>
+                    <div class="accordion-content mt-2">
+                        <p>
+                            <strong>Overview:</strong> My senior research project at UConn focused on numerically simulating 1D and 2D quantum spin chains, using Python and MATLAB to analyze energy spectra and phase transitions. I refactored legacy code to be modular and scalable, allowing simulations on a wider range of system sizes.
+                        </p>
+                        <p>
+                            Presented results at APS March Meeting 2024.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4">
+                Skills
+            </h2>
+            <div class="space-y-4">
+
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl mb-2">
+                        Programming
+                    </h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%;">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%;">
+                            <span>C++</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 70%;">
+                            <span>Mathematica</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 70%;">
+                            <span>MATLAB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border rounded p-4 bg-white">
+                    <h3 class="font-semibold text-xl mb-2">
+                        Tools & Systems
+                    </h3>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Linux (Arch/Manjaro)</li>
+                        <li>SSH / SFTP / Remote Access</li>
+                        <li>Git / Version Control</li>
+                        <li>Data Analysis / Pandas / NumPy</li>
+                        <li>CDK / Dealerware / MobilityCloud</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center p-4">
+        <p>
+            &copy; 2025 Aaron Beisaw. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Accordion Script -->
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const parent = button.parentElement;
+                parent.classList.toggle('accordion-open');
             });
-            
-            // Animate skill bars on page load
-            window.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('.skill-fill').forEach(bar => {
-                    const width = bar.getAttribute('data-width') || bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => { bar.style.width = width; }, 200);
-                });
-            });
-            </script>
+        });
+    </script>
+
+</body>
+
+</html>
