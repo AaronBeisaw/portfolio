@@ -1,221 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Beisaw | Physics Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Accordion & collapsible styles */
-        .accordion-button {
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aaron Beisaw | Physics Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    /* Neon/glow accent classes */
+    .glow-blue { box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff; }
+    .glow-purple { box-shadow: 0 0 10px #b19cd9, 0 0 20px #b19cd9; }
+    .glow-pink { box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+    .glow-indigo { box-shadow: 0 0 10px #7f7fff, 0 0 20px #7f7fff; }
 
-        .accordion-content {
-            display: none;
-            padding: 0.5rem 1rem;
-        }
+    .accordion-button {
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
 
-        .accordion-open .accordion-content {
-            display: block;
-        }
+    .accordion-content {
+        display: none;
+        padding: 0.5rem 1rem;
+    }
 
-        .skill-bar {
-            height: 1rem;
-            border-radius: 0.5rem;
-            background-color: #ddd;
-            overflow: hidden;
-            margin-bottom: 0.5rem;
-            position: relative;
-        }
+    .accordion-open .accordion-content {
+        display: block;
+    }
 
-        .skill-fill {
-            height: 100%;
-            background-color: #4f46e5;
-            width: 0;
-            transition: width 1s;
-        }
+    .skill-bar {
+        height: 1rem;
+        border-radius: 0.5rem;
+        background-color: #333;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
 
-        .skill-bar span {
-            position: absolute;
-            left: 0.5rem;
-            top: 0;
-            font-size: 0.75rem;
-            line-height: 1rem;
-            color: white;
-        }
-    </style>
+    .skill-fill {
+        height: 100%;
+        width: 0;
+        border-radius: 0.5rem;
+        transition: width 1s;
+    }
+
+    .skill-fill-blue { background-color: #00bfff; box-shadow: 0 0 10px #00bfff; }
+    .skill-fill-purple { background-color: #b19cd9; box-shadow: 0 0 10px #b19cd9; }
+    .skill-fill-pink { background-color: #ff69b4; box-shadow: 0 0 10px #ff69b4; }
+    .skill-fill-indigo { background-color: #7f7fff; box-shadow: 0 0 10px #7f7fff; }
+
+    body::-webkit-scrollbar {
+        width: 8px;
+    }
+    body::-webkit-scrollbar-track {
+        background: #1a1a1a;
+    }
+    body::-webkit-scrollbar-thumb {
+        background: #555;
+        border-radius: 4px;
+    }
+</style>
 </head>
+<body class="bg-gray-900 text-gray-100 font-sans">
 
-<body class="bg-gray-50 text-gray-900 font-sans">
+<!-- Header -->
+<header class="bg-gray-900 text-white p-8 text-center border-b border-gray-800">
+    <h1 class="text-4xl font-bold text-blue-400">Aaron Beisaw</h1>
+    <p class="text-xl mt-2 text-gray-300">Physics B.S.</p>
+    <p class="mt-2">
+        <a href="mailto:abeisaw@crabtreelexus.com" class="underline text-pink-400">abeisaw@crabtreelexus.com</a>
+    </p>
+    <a href="aaronBeisawCV.pdf" class="mt-4 inline-block bg-purple-600 text-white font-semibold px-4 py-2 rounded glow-purple hover:bg-purple-700">
+        Download CV (PDF)
+    </a>
+</header>
 
-    <!-- Header / Hero -->
-    <header class="bg-indigo-600 text-white p-8 text-center">
-        <h1 class="text-4xl font-bold">
-            Aaron Beisaw
-        </h1>
-        <p class="text-xl mt-2">
-            Physics B.S.
-        </p>
-        <p class="mt-2">
-            <a href="mailto:abeisaw@crabtreelexus.com" class="underline">
-                abeisaw@crabtreelexus.com
-            </a>
-        </p>
-        <a href="aaronBeisawCV.pdf"
-            class="mt-4 inline-block bg-white text-indigo-600 font-semibold px-4 py-2 rounded hover:bg-gray-100">
-            Download CV (PDF)
-        </a>
-    </header>
+<main class="max-w-5xl mx-auto p-8 space-y-12">
 
-    <main class="max-w-5xl mx-auto p-8 space-y-12">
-
-        <!-- About Me -->
-        <section>
-            <h2 class="text-3xl font-bold mb-4">
-                About Me
-            </h2>
-            <div class="space-y-4">
-
-                <div class="border rounded p-4 bg-white">
-                    <button class="accordion-button w-full text-left font-semibold">
-                        The Technical Side
-                    </button>
-                    <div class="accordion-content mt-2">
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>
-                                I enjoy working with anything that has to do with numbers and data, but in particular I enjoy optimization, simulation, and applying my math and coding skills to anything I am doing.
-                            </li>
-                            <li>
-                                I have worked on modeling and analyzing raw data from the Large Hadron Collider, numerical simulation of quantum spin chains, Supersymmetry, and have even applied my skills to identify problems in an automotive dealership based on data supported trends. In many of these situations, I have either ended up teaching myself something new to be able to accomplish my goals, or finding unexpected insights or problems along the way.
-                            </li>
-                            <li>
-                                It's safe to say math and coding are passions of mine, and I plan to keep developing my skills as I move through my career, no matter the industry.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="border rounded p-4 bg-white">
-                    <button class="accordion-button w-full text-left font-semibold">
-                        The Personal Side
-                    </button>
-                    <div class="accordion-content mt-2">
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>
-                                I am definitely a more quiet person. I enjoy working with a smaller team (10-15 people as an upper bound) as a subset of a larger group. I feel like this leads to better interpersonal relationships which in turn lead to better, more productive problem solving.
-                            </li>
-                            <li>
-                                Outside of work, I also enjoy a wide range of music, from heavy metal, to EDM, to traditional style Chinese and more. I played the trombone for eight years growing up, and my grandfather was in a Beatles cover band, so music is definitely a big part of my life. I also love being out in nature - whether that means hiking, running, fishing with friends, playing backyard sports, or taking the scenic route to appreciate the natural beauty even if it is a little bit slower.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+<!-- About Me -->
+<section>
+    <h2 class="text-3xl font-bold mb-4 text-indigo-400">About Me</h2>
+    <div class="space-y-4">
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-blue">
+            <button class="accordion-button w-full text-left font-semibold text-blue-300">The Technical Side</button>
+            <div class="accordion-content mt-2 text-gray-100">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>I enjoy working with anything that has to do with numbers and data, but in particular I enjoy optimization, simulation, and applying my math and coding skills to anything I am doing.</li>
+                    <li>I have worked on modeling and analyzing raw data from the Large Hadron Collider, numerical simulation of quantum spin chains, Supersymmetry, and have even applied my skills to identify problems in an automotive dealership based on data supported trends. In many of these situations, I have either ended up teaching myself something new to be able to accomplish my goals, or finding unexpected insights or problems along the way.</li>
+                    <li>It's safe to say math and coding are passions of mine, and I plan to keep developing my skills as I move through my career, no matter the industry.</li>
+                </ul>
             </div>
-        </section>
+        </div>
 
-        <!-- Education -->
-        <section>
-            <h2 class="text-3xl font-bold mb-4">
-                Education
-            </h2>
-            <div class="space-y-4">
-
-                <div class="border rounded p-4 bg-white">
-                    <h3 class="font-semibold text-xl">
-                        Gateway Community College
-                    </h3>
-                    <p>
-                        A.S. in Science and Mathematics
-                    </p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>
-                            Self studied some advanced topics in physics under Prof. Tom Mannino
-                        </li>
-                        <li>
-                            Performed physics 2 labs one on one with Prof. Mannino prior to the lab meeting in order to assist students as an unofficial lab TA.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="border rounded p-4 bg-white">
-                    <h3 class="font-semibold text-xl">
-                        University of Maryland
-                    </h3>
-                    <p>
-                        Progress towards B.S. in Physics
-                    </p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>
-                            Took part in a two semester honors sequence in computing and research in physics, during which I first learned Linux, data cleaning and analysis, and worked on a project under an advisor (see research section below for more details)
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="border rounded p-4 bg-white">
-                    <h3 class="font-semibold text-xl">
-                        University of Connecticut
-                    </h3>
-                    <p>
-                        B.S. in Physics
-                    </p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>
-                            March 2024, attended and gave a talk at the American Physical Society's March Meeting on the topic of quantum spin chain systems and numerical simulation.
-                        </li>
-                    </ul>
-                </div>
-
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-purple">
+            <button class="accordion-button w-full text-left font-semibold text-purple-300">The Personal Side</button>
+            <div class="accordion-content mt-2 text-gray-100">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>I am definitely a more quiet person. I enjoy working with a smaller team (10-15 people as an upper bound) as a subset of a larger group. I feel like this leads to better interpersonal relationships which in turn lead to better, more productive problem solving.</li>
+                    <li>Outside of work, I also enjoy a wide range of music, from heavy metal, to EDM, to traditional style Chinese and more. I played the trombone for eight years growing up, and my grandfather was in a Beatles cover band, so music is definitely a big part of my life. I also love being out in nature - whether that means hiking, running, fishing with friends, playing backyard sports, or taking the scenic route to appreciate the natural beauty even if it is a little bit slower.</li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Personal Work -->
-        <section>
-            <h2 class="text-3xl font-bold mb-4">
-                Personal Work
-            </h2>
-            <div class="space-y-4">
+<!-- Education -->
+<section>
+    <h2 class="text-3xl font-bold mb-4 text-indigo-400">Education</h2>
+    <div class="space-y-4">
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-pink">
+            <h3 class="font-semibold text-xl">Gateway Community College</h3>
+            <p>A.S. in Science and Mathematics</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li>Self studied some advanced topics in physics under Prof. Tom Mannino</li>
+                <li>Performed physics 2 labs one on one with Prof. Mannino prior to the lab meeting in order to assist students as an unofficial lab TA.</li>
+            </ul>
+        </div>
 
-                <div class="border rounded p-4 bg-white">
-                    <h3 class="font-semibold text-xl">
-                        Systems Administration and Troubleshooting
-                    </h3>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>
-                            I deployed Arch Linux (Manjaro) on two personal computer systems and successfully troubleshooted various errors that prevented boot after failed driver updates. In particular, recovery was successful after failed Nvidia driver updates without loss of data.
-                        </li>
-                        <li>
-                            I have successfully built 5 computer systems since 2013, along with several hardware upgrades and OS installs along the way
-                        </li>
-                        <li>
-                            When living on campus, I set up my home desktop to be accessible from my laptop via SSH and SFTP
-                        </li>
-                        <li>
-                            I successfully troubleshooted and solved memory corruption issues with Riot Games's Vanguard kernel anticheat and windows 11 version 23H2, which was resulting in repeated BSOD. Troubleshooting involved looking through the windows memory dump and testing my memory to rule it out as a culprit, eventually leading me to vanguard as the source of the problem.
-                        </li>
-                    </ul>
-                </div>
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-blue">
+            <h3 class="font-semibold text-xl">University of Maryland</h3>
+            <p>Progress towards B.S. in Physics</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li>Took part in a two semester honors sequence in computing and research in physics, during which I first learned Linux, data cleaning and analysis, and worked on a project under an advisor (see research section below for more details)</li>
+            </ul>
+        </div>
 
-                <div class="border rounded p-4 bg-white">
-                    <h3 class="font-semibold text-xl">
-                        Computational and Numerical Coding
-                    </h3>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>
-                            <strong>Lexus Service Data Analysis In progress:</strong> Developing a Python program that takes CSV data from three sources at work, cleans them, properly links the rows from each source together (this is all customer based data, so this is crucial), and outputs a new CSV with all of the relevant data for further analysis. This is going to be used to analyze shop performance and identify problem areas and to guide us in identifying root causes.
-                        </li>
-                        <li>
-                            <strong>Quantum Spin Chain project:</strong> Refactored my research group's code to be modular and, as a result, much more flexible than how we initially wrote it. This resulted in us being able to run simulations faster and on a much wider range of systems without having to double the amount of backend code. In particular, we were able to jump straight into the second phase of the project and begin analysis and simulation of two dimensional systems.
-                        </li>
-                    </ul>
-                </div>
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-purple">
+            <h3 class="font-semibold text-xl">University of Connecticut</h3>
+            <p>B.S. in Physics</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li>March 2024, attended and gave a talk at the American Physical Society's March Meeting on the topic of quantum spin chain systems and numerical simulation.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-            </div>
-        </section>
+<!-- Personal Work -->
+<section>
+    <h2 class="text-3xl font-bold mb-4 text-indigo-400">Personal Work</h2>
+    <div class="space-y-4">
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-pink">
+            <h3 class="font-semibold text-xl">Systems Administration and Troubleshooting</h3>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li>I deployed Arch Linux (Manjaro) on two personal computer systems and successfully troubleshooted various errors that prevented boot after failed driver updates. In particular, recovery was successful after failed Nvidia driver updates without loss of data.</li>
+                <li>I have successfully built 5 computer systems since 2013, along with several hardware upgrades and OS installs along the way</li>
+                <li>When living on campus, I set up my home desktop to be accessible from my laptop via SSH and SFTP</li>
+                <li>I successfully troubleshooted and solved memory corruption issues with Riot Games's Vanguard kernel anticheat and windows 11 version 23H2, which was resulting in repeated BSOD. Troubleshooting involved looking through the windows memory dump and testing my memory to rule it out as a culprit, eventually leading me to vanguard as the source of the problem.</li>
+            </ul>
+        </div>
+
+        <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
+            <h3 class="font-semibold text-xl">Computational and Numerical Coding</h3>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li><strong>Lexus Service Data Analysis In progress:</strong> Developing a Python program that takes CSV data from three sources at work, cleans them, properly links the rows from each source together (this is all customer based data, so this is crucial), and outputs a new CSV with all of the relevant data for further analysis. This is going to be used to analyze shop performance and identify problem areas and to guide us in identifying root causes.</li>
+                <li><strong>Quantum Spin Chain project:</strong> Refactored my research group's code to be modular and, as a result, much more flexible than how we initially wrote it. This resulted in us being able to run simulations faster and on a much wider range of systems without having to double the amount of backend code. In particular, we were able to jump straight into the second phase of the project and begin analysis and simulation of two dimensional systems.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 
         <!-- Work Experience -->
         <section>
@@ -224,7 +165,7 @@
             </h2>
             <div class="space-y-4">
 
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         Specialty Fundraising Agent | Lester Inc. | 2019-2020
                     </button>
@@ -237,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         Parts Counterman | McDermott / Crabtree Chevrolet | 2023-2025
                     </button>
@@ -268,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         FastTrac Assistant Manager | Crabtree Lexus | 2025-Present
                     </button>
@@ -316,7 +257,7 @@
             <div class="space-y-4">
 
                 <!-- Particle Theory -->
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         Particle Theory | Advisor: Dr. Kaustubh Agashe, UMD | 02 2021-05 2021
                     </button>
@@ -335,7 +276,7 @@
                 </div>
 
                 <!-- Field Theory -->
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         Field Theory | Led By: Dr. S. James Gates Jr. et. al., Brown University | June 1, 2021 - June 25, 2021
                     </button>
@@ -356,7 +297,7 @@
                 </div>
 
                 <!-- Supersymmetry -->
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         Supersymmetry | Led By: Dr. S. James Gates Jr., Brown University | June, 2021 - June, 2022
                     </button>
@@ -368,7 +309,7 @@
                 </div>
 
                 <!-- Quantum Spin Chains -->
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <button class="accordion-button w-full text-left font-semibold">
                         Quantum Spin Chains | Advisor: Dr. Manuel Valiente, University of Connecticut | Fall 2022 - Spring 2024
                     </button>
@@ -392,7 +333,7 @@
             </h2>
             <div class="space-y-4">
 
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <h3 class="font-semibold text-xl mb-2">
                         Programming
                     </h3>
@@ -418,7 +359,7 @@
                     </div>
                 </div>
 
-                <div class="border rounded p-4 bg-white">
+                <div class="border border-gray-700 rounded p-4 bg-gray-800 glow-indigo">
                     <h3 class="font-semibold text-xl mb-2">
                         Tools & Systems
                     </h3>
